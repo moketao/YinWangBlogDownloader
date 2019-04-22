@@ -80,10 +80,17 @@ def saveCurrUrList(urls, filename, mode = 'a'):
 
 if __name__ == '__main__':
     urls = get_title_list()
+    
+    start = 0
     end = len(urls)
-    print(end)
+    
+    # 修改 start 和 end 的值，可局部更新。
+    # start = 0
     # end = 100
-    for i in range(0, end):
+
+
+    print(end)
+    for i in range(start, end):
         urls = get_url_list()
         title_list = get_title_list()
         print(title_list[i])
