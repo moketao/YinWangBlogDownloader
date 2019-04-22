@@ -2,7 +2,7 @@
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="content-type"/>
 <meta content="width=device-width, initial-scale=0.5" name="viewport"/>
-<link href="http://www.yinwang.org/main.css" rel="stylesheet" type="text/css"/>
+<link href="css/main.css" rel="stylesheet" type="text/css"/>
 <link href="/atom.xml" rel="alternate" title="Atom feed" type="application/atom+xml"/>
 <link href="http://www.yinwang.org/images/Yc.jpg" rel="shortcut icon"/>
 <title>函数式语言的宗教</title>
@@ -40,7 +40,7 @@
 <p>在这种害怕自己用的语言“不纯”，不安全的恐慌之下，我开始接触 Haskell，一种号称“纯函数式”，安全的语言。我深信 Haskell 的纯函数教条长达几年之久，对其它语言里的“副作用”（side-effect）嗤之以鼻。我认为宇宙的本质是纯的，数学就是宇宙的终极语言，所以程序语言也应该像数学一样纯粹……</p>
 <p>你有没有意识到，所有的邪教头子最初都是利用了人们的恐惧心理，进而让他们深信不疑，以为遇到了救世主的？当我多次碰壁，猛然醒悟的时候，我发现 Haskell 就是这样一种邪教 :p</p>
 <p>每一种宗教都有一个神秘的，体现自己“精神”的徽标。Haskell 的是这个样子：</p>
-<p><img src="http://www.yinwang.org/images/haskell-logo.jpg" width="240"/></p>
+<p><img src="images/haskell-logo.jpg" width="240"/></p>
 <p>当一个初学者进入 Haskell 的 IRC 聊天室的时候，老手们会极其耐心地问答他的问题。他们告诉他，Haskell 社区是最友好，最不宗教，最讲科学和理性的社区。可是久而久之，你发现其实不是那个样子。他们对你友好，当且仅当你没有指出 Haskell 的致命缺陷。如果你知道了那些缺陷，要跟他们讨论的时候，就会发现一切都变了。他们会说，你懂不起！我们是科学家！如果你不承认这一点，我们就杀了你！:p</p>
 <p>Haskell 的社区喜欢在他们的概念里省掉“纯”这个字，把 Haskell 叫做“函数式语言”。他们喜欢“纠正”别人的概念。他们告诉人们，“不纯”的函数式语言，其实都不配叫做“函数式语言”。在他们的这种定义下，Lisp 这么老牌的函数式语言，居然都不能叫“函数式语言”了。但是看完这篇文章你就会发现，其实他们的这种定义是狭隘和错误的。</p>
 <p>在 Haskell 里面，你不能使用通常语言里面都有的赋值语句，比如 Pascal 里的 <code class="highlighter-rouge">x:=1</code>，C 和 Java 里的 <code class="highlighter-rouge">x=1</code>，或者 Scheme 里的 <code class="highlighter-rouge">(set! x 1)</code>，Common Lisp 里的 <code class="highlighter-rouge">(setq x 1)</code>。这样一来，你就不可能保留“状态”（state）。所谓“状态”，就是指“随机数种子”那样的东西，其实本质上就是“全局变量”。比如，在 C 语言里定义 <code class="highlighter-rouge">random()</code> 函数，你可以这么做：</p>
